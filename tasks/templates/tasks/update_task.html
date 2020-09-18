@@ -1,0 +1,16 @@
+{% extends 'tasks/layout.html' %}
+
+{% block body %}
+
+<div class="center-column">
+<h3 style="text-align:center; color:#ffae19 ">Update Task</h3>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.title }}
+    <span>Complete:{{ form.complete }}</span>
+    <input class="btn btn-info" type="submit" name="Update Task">
+</form>
+</div>
+
+{% endblock %}
